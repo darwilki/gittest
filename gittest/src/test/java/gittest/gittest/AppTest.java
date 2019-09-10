@@ -1,30 +1,23 @@
 package gittest.gittest;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
-
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriver;		
 
-import org.testng.Assert;	
-import org.testng.annotations.Test;	
+import org.testng.Assert;
+import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;	
 import org.testng.annotations.AfterTest;		
 
 public class AppTest {
 	
-	@Test
+private WebDriver driver;
 
-	
-	Public void guru99tutorials() throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\darwilki\\Documents\\Selenium\\Downloads\\Drivers\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		String eTitle = "Meet Guru99";
-		String aTitle = "";
-		
+String eTitle = "Meet Guru99";
+String aTitle = "";
+
+	@Test
+	public void guru99tutorials() {
 		driver.get("http://www.guru99.com/");
-		driver.manage().window().maximize();
 		aTitle = driver.getTitle();
 		
 		if (aTitle.contentEquals(eTitle)) {
@@ -33,6 +26,17 @@ public class AppTest {
 			System.out.println("Test Failed");
 		}
 		
-		driver.close();
-	}
+		@BeforeTest
+		public void beforeTest() {	
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\darwilki\\Documents\\Selenium\\Downloads\\Drivers\\chromedriver.exe");
+		    driver = new ChromeDriver();
+		    driver.manage().window().maximize();
+		}	
+		
+		
+		@AfterTest
+		public void afterTest() {
+			driver.quit();			
+		}		
+
 }
