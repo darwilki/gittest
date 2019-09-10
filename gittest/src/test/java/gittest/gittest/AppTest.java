@@ -10,13 +10,14 @@ public class AppTest {
 	
 private WebDriver driver;
 
-String eTitle = "Meet Guru99";
+String eTitle = "Meet Guru99 - Free Training Tutorials & Video for IT Courses";
 String aTitle = "";
 
 	@Test
 	public void guru99tutorials() {
 		driver.get("http://www.guru99.com/");
 		aTitle = driver.getTitle();
+		System.out.println(aTitle);
 		
 		if (aTitle.contentEquals(eTitle)) {
 			System.out.println("Test Passed");
