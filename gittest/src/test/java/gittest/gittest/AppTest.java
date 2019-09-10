@@ -2,7 +2,6 @@ package gittest.gittest;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;		
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;	
 import org.testng.annotations.AfterTest;		
@@ -24,18 +23,19 @@ String aTitle = "";
 		} else {
 			System.out.println("Test Failed");
 		}
+	}
 		
-		@BeforeTest
-		public void beforeTest() {	
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\darwilki\\Documents\\Selenium\\Downloads\\Drivers\\chromedriver.exe");
-		    driver = new ChromeDriver();
-		    driver.manage().window().maximize();
-		}	
+	@BeforeTest
+	public void beforeTest() {	
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\darwilki\\Documents\\Selenium\\Downloads\\Drivers\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+	}	
 		
 		
-		@AfterTest
-		public void afterTest() {
-			driver.quit();			
-		}		
+	@AfterTest
+	public void afterTest() {
+		driver.quit();			
+	}		
 
 }
