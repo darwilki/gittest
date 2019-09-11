@@ -10,7 +10,7 @@ public class AppTest {
 	
 private WebDriver driver;
 
-String eTitle = "Meet Guru99 - Free Training Tutorials & Video for IT Courses";
+String eTitle = "Meet Guru99 - Free Training Tutorials & Video for IT Course";
 String aTitle = "";
 
 	@Test
