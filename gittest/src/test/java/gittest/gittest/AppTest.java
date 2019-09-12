@@ -11,7 +11,7 @@ public class AppTest {
 	
 private WebDriver driver;
 
-String eTitle = "Meet Guru99 - Free Training Tutorials & Video for IT Course";
+String eTitle = "Meet Guru99 - Free Training Tutorials & Video for IT Courses";
 String aTitle = "";
 
 	@Test
